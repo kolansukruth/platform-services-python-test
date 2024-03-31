@@ -5,7 +5,7 @@ from handlers.customers_handler import CustomersHandler
 
 url_patterns = [
     (r'/rewards', RewardsHandler),
-    (r'/addRewards', OrderHandler),
+    (r'/addRewards', OrderHandler, dict(dao=MongoDBDao())),
     (r'/getCustomerRewards', RewardsDataHandler),
     (r'/getCustomers', CustomersHandler),
 ]
